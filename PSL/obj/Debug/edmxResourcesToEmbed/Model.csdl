@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLHVdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="AccID" />
+    </Key>
+    <Property Name="AccID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pass" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="is_admin" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Class">
+    <Key>
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Name="ClassID" Type="Int32" Nullable="false" />
+    <Property Name="ClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClassDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Students" Relationship="Self.FK__Student__Student__25869641" FromRole="Class" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Fee">
+    <Key>
+      <PropertyRef Name="FeesID" />
+    </Key>
+    <Property Name="Amount" Type="Int64" />
+    <Property Name="Is_pay" Type="Boolean" />
+    <Property Name="StudentID" Type="Int32" />
+    <Property Name="FeesID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Student" Relationship="Self.FK__Fees__StudentID__286302EC" FromRole="Fees" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StuAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RegistryDate" Type="DateTime" Precision="3" />
+    <Property Name="StudentClassID" Type="Int32" />
+    <Property Name="gender" Type="Boolean" />
+    <NavigationProperty Name="Class" Relationship="Self.FK__Student__Student__25869641" FromRole="Student" ToRole="Class" />
+    <NavigationProperty Name="Fees" Relationship="Self.FK__Fees__StudentID__286302EC" FromRole="Student" ToRole="Fees" />
+  </EntityType>
+  <Association Name="FK__Student__Student__25869641">
+    <End Role="Class" Type="Self.Class" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="StudentClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Fees__StudentID__286302EC">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="Fees" Type="Self.Fee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="Fees">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLHVdbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="Classes" EntityType="Self.Class" />
+    <EntitySet Name="Fees" EntityType="Self.Fee" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <AssociationSet Name="FK__Student__Student__25869641" Association="Self.FK__Student__Student__25869641">
+      <End Role="Class" EntitySet="Classes" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Fees__StudentID__286302EC" Association="Self.FK__Fees__StudentID__286302EC">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="Fees" EntitySet="Fees" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
