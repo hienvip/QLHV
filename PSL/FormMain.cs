@@ -98,7 +98,7 @@ namespace PSL
                     {
                         db.Students.Remove(dataGridView1.Rows[i].DataBoundItem as Student);
                         studentBindingSource.RemoveAt(dataGridView1.Rows[i].Index);
-                       
+                        db.SaveChanges();
                     }
                 }
             }
@@ -130,7 +130,7 @@ namespace PSL
 
         private void BtnAdmin_Click(object sender, EventArgs e)
         {
-            using (FormAddAccount frm = new FormAddAccount())
+            using (frmAccount frm = new frmAccount())
             {
                 this.Hide();
                 frm.ShowDialog();

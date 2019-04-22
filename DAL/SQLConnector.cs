@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -23,6 +24,7 @@ namespace DAL
         public static bool is_login;
         public static string username;
         public static bool is_admin;
+        public static bool checkRegistry;
         private static void SetConnectionString()
         {
             string ConnectionTemplate = @"Server={0};Database={1};Trusted_Connection=True;";
@@ -82,5 +84,26 @@ namespace DAL
             }
 
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cmdText"></param>
+        /// <param name="agrs">username,password,is_admin</param>
+        //public static void InsertData(params object[] agrs)
+        //{
+        //    string cmdText = "insert into dbo.Account(username,Pass,is_admin) values(@param1,@param2,@param3)";
+        //    using (SqlConnection conn = new SqlConnection())
+        //    {
+        //        conn.Open();
+        //        SqlCommand cmd = new SqlCommand(cmdText, conn);
+                
+        //            cmd.Parameters.Add("@param1", agrs[0]);
+        //            cmd.Parameters.Add("@param2", agrs[1]);
+        //            cmd.Parameters.Add("@param3", agrs[2]);
+        //            cmd.ExecuteNonQuery();
+                
+        //    }
+        //}
     }
 }

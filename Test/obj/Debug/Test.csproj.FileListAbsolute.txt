@@ -16,3 +16,15 @@ D:\Visual studio\C#\SofwareProject\Test\obj\Debug\Test.csproj.CoreCompileInputs.
 D:\Visual studio\C#\SofwareProject\Test\obj\Debug\Test.csproj.CopyComplete
 D:\Visual studio\C#\SofwareProject\Test\obj\Debug\Test.exe
 D:\Visual studio\C#\SofwareProject\Test\obj\Debug\Test.pdb
+D:\Visualstudio\C#\SofwareProject\Test\bin\Debug\Test.exe.config
+D:\Visualstudio\C#\SofwareProject\Test\bin\Debug\Test.exe
+D:\Visualstudio\C#\SofwareProject\Test\bin\Debug\Test.pdb
+D:\Visualstudio\C#\SofwareProject\Test\bin\Debug\BLL.dll
+D:\Visualstudio\C#\SofwareProject\Test\bin\Debug\DAL.dll
+D:\Visualstudio\C#\SofwareProject\Test\bin\Debug\BLL.pdb
+D:\Visualstudio\C#\SofwareProject\Test\bin\Debug\DAL.pdb
+D:\Visualstudio\C#\SofwareProject\Test\obj\Debug\Test.csprojAssemblyReference.cache
+D:\Visualstudio\C#\SofwareProject\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+D:\Visualstudio\C#\SofwareProject\Test\obj\Debug\Test.csproj.CopyComplete
+D:\Visualstudio\C#\SofwareProject\Test\obj\Debug\Test.exe
+D:\Visualstudio\C#\SofwareProject\Test\obj\Debug\Test.pdb

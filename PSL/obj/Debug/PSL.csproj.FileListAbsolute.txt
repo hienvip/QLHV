@@ -45,5 +45,27 @@ D:\Visual studio\C#\SofwareProject\PSL\bin\Debug\DAL.pdb
 D:\Visual studio\C#\SofwareProject\PSL\bin\Debug\EntityFramework.xml
 D:\Visual studio\C#\SofwareProject\PSL\bin\Debug\EntityFramework.SqlServer.xml
 D:\Visual studio\C#\SofwareProject\PSL\obj\Debug\PSL.csproj.CopyComplete
-D:\Visual studio\C#\SofwareProject\PSL\bin\Debug\QLHVdb.mdf
-D:\Visual studio\C#\SofwareProject\PSL\bin\Debug\QLHVdb_log.ldf
+D:\Visualstudio\C#\SofwareProject\PSL\bin\Debug\PSL.exe.config
+D:\Visualstudio\C#\SofwareProject\PSL\bin\Debug\PSL.exe
+D:\Visualstudio\C#\SofwareProject\PSL\bin\Debug\PSL.pdb
+D:\Visualstudio\C#\SofwareProject\PSL\bin\Debug\.Designer.cs.dll
+D:\Visualstudio\C#\SofwareProject\PSL\bin\Debug\BLL.dll
+D:\Visualstudio\C#\SofwareProject\PSL\bin\Debug\DAL.dll
+D:\Visualstudio\C#\SofwareProject\PSL\bin\Debug\EntityFramework.dll
+D:\Visualstudio\C#\SofwareProject\PSL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Visualstudio\C#\SofwareProject\PSL\bin\Debug\BLL.pdb
+D:\Visualstudio\C#\SofwareProject\PSL\bin\Debug\DAL.pdb
+D:\Visualstudio\C#\SofwareProject\PSL\bin\Debug\EntityFramework.xml
+D:\Visualstudio\C#\SofwareProject\PSL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Visualstudio\C#\SofwareProject\PSL\obj\Debug\PSL.FormAddAccount.resources
+D:\Visualstudio\C#\SofwareProject\PSL\obj\Debug\PSL.FormAddEdit.resources
+D:\Visualstudio\C#\SofwareProject\PSL\obj\Debug\PSL.FormLogin.resources
+D:\Visualstudio\C#\SofwareProject\PSL\obj\Debug\PSL.FormMain.resources
+D:\Visualstudio\C#\SofwareProject\PSL\obj\Debug\PSL.Properties.Resources.resources
+D:\Visualstudio\C#\SofwareProject\PSL\obj\Debug\PSL.csproj.GenerateResource.cache
+D:\Visualstudio\C#\SofwareProject\PSL\obj\Debug\PSL.csproj.CoreCompileInputs.cache
+D:\Visualstudio\C#\SofwareProject\PSL\obj\Debug\PSL.csproj.CopyComplete
+D:\Visualstudio\C#\SofwareProject\PSL\obj\Debug\PSL.exe
+D:\Visualstudio\C#\SofwareProject\PSL\obj\Debug\PSL.pdb
+D:\Visualstudio\C#\SofwareProject\PSL\obj\Debug\PSL.csprojAssemblyReference.cache
+D:\Visualstudio\C#\SofwareProject\PSL\obj\Debug\PSL.frmAccount.resources

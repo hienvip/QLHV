@@ -10,3 +10,12 @@ D:\Visual studio\C#\SofwareProject\DAL\obj\Debug\DAL.csprojAssemblyReference.cac
 D:\Visual studio\C#\SofwareProject\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\Visual studio\C#\SofwareProject\DAL\obj\Debug\DAL.dll
 D:\Visual studio\C#\SofwareProject\DAL\obj\Debug\DAL.pdb
+D:\Visualstudio\C#\SofwareProject\DAL\bin\Debug\DAL.dll
+D:\Visualstudio\C#\SofwareProject\DAL\bin\Debug\DAL.pdb
+D:\Visualstudio\C#\SofwareProject\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\Visualstudio\C#\SofwareProject\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Visualstudio\C#\SofwareProject\DAL\obj\Debug\DAL.dll
+D:\Visualstudio\C#\SofwareProject\DAL\obj\Debug\DAL.pdb
+D:\Visualstudio\C#\SofwareProject\DAL\bin\Debug\BLL.dll
+D:\Visualstudio\C#\SofwareProject\DAL\bin\Debug\BLL.pdb
+D:\Visualstudio\C#\SofwareProject\DAL\obj\Debug\DAL.csproj.CopyComplete

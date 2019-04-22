@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.StudentClassIDComboBox = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnOut = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -38,16 +39,15 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
-            this.classBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stuAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.registryDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentClassIDComboBox = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.classBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
@@ -74,6 +74,19 @@
             this.dataGridView1.Size = new System.Drawing.Size(1004, 379);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            // 
+            // StudentClassIDComboBox
+            // 
+            this.StudentClassIDComboBox.DataPropertyName = "StudentClassID";
+            this.StudentClassIDComboBox.DataSource = this.classBindingSource;
+            this.StudentClassIDComboBox.DisplayMember = "ClassName";
+            this.StudentClassIDComboBox.HeaderText = "StudentClassID";
+            this.StudentClassIDComboBox.MinimumWidth = 6;
+            this.StudentClassIDComboBox.Name = "StudentClassIDComboBox";
+            this.StudentClassIDComboBox.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.StudentClassIDComboBox.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.StudentClassIDComboBox.ValueMember = "ClassID";
+            this.StudentClassIDComboBox.Width = 125;
             // 
             // label1
             // 
@@ -192,18 +205,6 @@
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Click += new System.EventHandler(this.BtnAdmin_Click);
             // 
-            // classBindingSource
-            // 
-            this.classBindingSource.DataSource = typeof(PSL.Class);
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataSource = typeof(PSL.Student);
-            // 
-            // accountBindingSource
-            // 
-            this.accountBindingSource.DataSource = typeof(PSL.Account);
-            // 
             // studentIDDataGridViewTextBoxColumn
             // 
             this.studentIDDataGridViewTextBoxColumn.DataPropertyName = "StudentID";
@@ -252,18 +253,17 @@
             this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
             this.genderDataGridViewTextBoxColumn.Width = 125;
             // 
-            // StudentClassIDComboBox
+            // classBindingSource
             // 
-            this.StudentClassIDComboBox.DataPropertyName = "StudentClassID";
-            this.StudentClassIDComboBox.DataSource = this.classBindingSource;
-            this.StudentClassIDComboBox.DisplayMember = "ClassName";
-            this.StudentClassIDComboBox.HeaderText = "StudentClassID";
-            this.StudentClassIDComboBox.MinimumWidth = 6;
-            this.StudentClassIDComboBox.Name = "StudentClassIDComboBox";
-            this.StudentClassIDComboBox.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.StudentClassIDComboBox.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.StudentClassIDComboBox.ValueMember = "ClassID";
-            this.StudentClassIDComboBox.Width = 125;
+            this.classBindingSource.DataSource = typeof(PSL.Class);
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataSource = typeof(PSL.Student);
+            // 
+            // accountBindingSource
+            // 
+            this.accountBindingSource.DataSource = typeof(PSL.Account);
             // 
             // FormMain
             // 

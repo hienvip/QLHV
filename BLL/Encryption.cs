@@ -14,9 +14,10 @@ namespace BLL
             using (MD5 md5Hash = MD5.Create())
             {
                 string hash = GetMd5Hash(md5Hash, _input);
-                return MyEncrypt(hash);
+                return hash;
             }
         }
+
 
         public static string MyEncrypt(string _input)
         {
