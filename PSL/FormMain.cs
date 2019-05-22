@@ -21,7 +21,11 @@ namespace PSL
         QLHVEntities db;
         private void BtnOut_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+           DialogResult result = MessageBox.Show("Are you want to exit", "Message", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.OK)
+            {
+                Application.Exit();
+            }
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -136,6 +140,18 @@ namespace PSL
                 frm.ShowDialog();
                 
             }
+        }
+
+        private void BtnClass_Click(object sender, EventArgs e)
+        {
+            frmClass frm = new frmClass();
+            frm.ShowDialog();
+        }
+
+        private void BtnShowReport_Click(object sender, EventArgs e)
+        {
+            frmReport frm = new frmReport();
+            frm.ShowDialog();
         }
     }
 }

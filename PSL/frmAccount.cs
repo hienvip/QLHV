@@ -41,6 +41,8 @@ namespace PSL
 
         private void BtnOut_Click(object sender, EventArgs e)
         {
+            FormMain frm = new FormMain();
+            frm.ShowDialog();
             this.Hide();
         }
 
@@ -82,6 +84,26 @@ namespace PSL
 
                 MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void BtnRefresh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

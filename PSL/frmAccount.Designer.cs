@@ -56,6 +56,7 @@
             this.label1.Size = new System.Drawing.Size(335, 49);
             this.label1.TabIndex = 14;
             this.label1.Text = "Account Management";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // dataGridView1
             // 
@@ -71,8 +72,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(652, 298);
+            this.dataGridView1.Size = new System.Drawing.Size(714, 298);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // btnOut
             // 
@@ -135,6 +137,7 @@
             this.btnEdit.Text = "Edit";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnAdd
             // 
@@ -166,6 +169,7 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // accIDDataGridViewTextBoxColumn
             // 
@@ -207,7 +211,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 583);
+            this.ClientSize = new System.Drawing.Size(903, 557);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnOut);
             this.Controls.Add(this.label1);

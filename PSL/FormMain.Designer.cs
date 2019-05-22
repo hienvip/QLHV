@@ -29,25 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.StudentClassIDComboBox = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnOut = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnAdmin = new System.Windows.Forms.Button();
             this.studentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stuAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.registryDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentClassIDComboBox = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.classBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAdmin = new System.Windows.Forms.Button();
+            this.btnClass = new System.Windows.Forms.Button();
+            this.btnOut = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnShowReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
@@ -75,6 +78,54 @@
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
+            // studentIDDataGridViewTextBoxColumn
+            // 
+            this.studentIDDataGridViewTextBoxColumn.DataPropertyName = "StudentID";
+            this.studentIDDataGridViewTextBoxColumn.HeaderText = "StudentID";
+            this.studentIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.studentIDDataGridViewTextBoxColumn.Name = "studentIDDataGridViewTextBoxColumn";
+            this.studentIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // studentNameDataGridViewTextBoxColumn
+            // 
+            this.studentNameDataGridViewTextBoxColumn.DataPropertyName = "StudentName";
+            this.studentNameDataGridViewTextBoxColumn.HeaderText = "StudentName";
+            this.studentNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.studentNameDataGridViewTextBoxColumn.Name = "studentNameDataGridViewTextBoxColumn";
+            this.studentNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // phoneNumDataGridViewTextBoxColumn
+            // 
+            this.phoneNumDataGridViewTextBoxColumn.DataPropertyName = "PhoneNum";
+            this.phoneNumDataGridViewTextBoxColumn.HeaderText = "PhoneNum";
+            this.phoneNumDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.phoneNumDataGridViewTextBoxColumn.Name = "phoneNumDataGridViewTextBoxColumn";
+            this.phoneNumDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // stuAddressDataGridViewTextBoxColumn
+            // 
+            this.stuAddressDataGridViewTextBoxColumn.DataPropertyName = "StuAddress";
+            this.stuAddressDataGridViewTextBoxColumn.HeaderText = "StuAddress";
+            this.stuAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.stuAddressDataGridViewTextBoxColumn.Name = "stuAddressDataGridViewTextBoxColumn";
+            this.stuAddressDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // registryDateDataGridViewTextBoxColumn
+            // 
+            this.registryDateDataGridViewTextBoxColumn.DataPropertyName = "RegistryDate";
+            this.registryDateDataGridViewTextBoxColumn.HeaderText = "RegistryDate";
+            this.registryDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.registryDateDataGridViewTextBoxColumn.Name = "registryDateDataGridViewTextBoxColumn";
+            this.registryDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "gender";
+            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            this.genderDataGridViewTextBoxColumn.Width = 125;
+            // 
             // StudentClassIDComboBox
             // 
             this.StudentClassIDComboBox.DataPropertyName = "StudentClassID";
@@ -88,6 +139,14 @@
             this.StudentClassIDComboBox.ValueMember = "ClassID";
             this.StudentClassIDComboBox.Width = 125;
             // 
+            // classBindingSource
+            // 
+            this.classBindingSource.DataSource = typeof(PSL.Class);
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataSource = typeof(PSL.Student);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -99,13 +158,44 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Student Management";
             // 
+            // btnAdmin
+            // 
+            this.btnAdmin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdmin.BackgroundImage")));
+            this.btnAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAdmin.FlatAppearance.BorderSize = 0;
+            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmin.Location = new System.Drawing.Point(969, 93);
+            this.btnAdmin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(82, 67);
+            this.btnAdmin.TabIndex = 8;
+            this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.Click += new System.EventHandler(this.BtnAdmin_Click);
+            // 
+            // btnClass
+            // 
+            this.btnClass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClass.BackgroundImage")));
+            this.btnClass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClass.FlatAppearance.BorderSize = 0;
+            this.btnClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClass.Location = new System.Drawing.Point(844, 93);
+            this.btnClass.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClass.Name = "btnClass";
+            this.btnClass.Size = new System.Drawing.Size(76, 64);
+            this.btnClass.TabIndex = 9;
+            this.btnClass.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClass.UseVisualStyleBackColor = true;
+            this.btnClass.Click += new System.EventHandler(this.BtnClass_Click);
+            // 
             // btnOut
             // 
             this.btnOut.FlatAppearance.BorderSize = 0;
             this.btnOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOut.Image = global::PSL.Properties.Resources.Windows_Close_Program_icon;
-            this.btnOut.Location = new System.Drawing.Point(1036, -1);
+            this.btnOut.Location = new System.Drawing.Point(1096, 11);
             this.btnOut.Margin = new System.Windows.Forms.Padding(4);
             this.btnOut.Name = "btnOut";
             this.btnOut.Size = new System.Drawing.Size(88, 81);
@@ -194,82 +284,32 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
-            // btnAdmin
-            // 
-            this.btnAdmin.Location = new System.Drawing.Point(820, 30);
-            this.btnAdmin.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(100, 28);
-            this.btnAdmin.TabIndex = 8;
-            this.btnAdmin.Text = "admin";
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            this.btnAdmin.Click += new System.EventHandler(this.BtnAdmin_Click);
-            // 
-            // studentIDDataGridViewTextBoxColumn
-            // 
-            this.studentIDDataGridViewTextBoxColumn.DataPropertyName = "StudentID";
-            this.studentIDDataGridViewTextBoxColumn.HeaderText = "StudentID";
-            this.studentIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studentIDDataGridViewTextBoxColumn.Name = "studentIDDataGridViewTextBoxColumn";
-            this.studentIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // studentNameDataGridViewTextBoxColumn
-            // 
-            this.studentNameDataGridViewTextBoxColumn.DataPropertyName = "StudentName";
-            this.studentNameDataGridViewTextBoxColumn.HeaderText = "StudentName";
-            this.studentNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studentNameDataGridViewTextBoxColumn.Name = "studentNameDataGridViewTextBoxColumn";
-            this.studentNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // phoneNumDataGridViewTextBoxColumn
-            // 
-            this.phoneNumDataGridViewTextBoxColumn.DataPropertyName = "PhoneNum";
-            this.phoneNumDataGridViewTextBoxColumn.HeaderText = "PhoneNum";
-            this.phoneNumDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.phoneNumDataGridViewTextBoxColumn.Name = "phoneNumDataGridViewTextBoxColumn";
-            this.phoneNumDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // stuAddressDataGridViewTextBoxColumn
-            // 
-            this.stuAddressDataGridViewTextBoxColumn.DataPropertyName = "StuAddress";
-            this.stuAddressDataGridViewTextBoxColumn.HeaderText = "StuAddress";
-            this.stuAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.stuAddressDataGridViewTextBoxColumn.Name = "stuAddressDataGridViewTextBoxColumn";
-            this.stuAddressDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // registryDateDataGridViewTextBoxColumn
-            // 
-            this.registryDateDataGridViewTextBoxColumn.DataPropertyName = "RegistryDate";
-            this.registryDateDataGridViewTextBoxColumn.HeaderText = "RegistryDate";
-            this.registryDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.registryDateDataGridViewTextBoxColumn.Name = "registryDateDataGridViewTextBoxColumn";
-            this.registryDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "gender";
-            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            this.genderDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // classBindingSource
-            // 
-            this.classBindingSource.DataSource = typeof(PSL.Class);
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataSource = typeof(PSL.Student);
-            // 
             // accountBindingSource
             // 
             this.accountBindingSource.DataSource = typeof(PSL.Account);
+            // 
+            // btnShowReport
+            // 
+            this.btnShowReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowReport.BackgroundImage")));
+            this.btnShowReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShowReport.FlatAppearance.BorderSize = 0;
+            this.btnShowReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowReport.Location = new System.Drawing.Point(1096, 521);
+            this.btnShowReport.Margin = new System.Windows.Forms.Padding(4);
+            this.btnShowReport.Name = "btnShowReport";
+            this.btnShowReport.Size = new System.Drawing.Size(82, 67);
+            this.btnShowReport.TabIndex = 10;
+            this.btnShowReport.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnShowReport.UseVisualStyleBackColor = true;
+            this.btnShowReport.Click += new System.EventHandler(this.BtnShowReport_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1123, 635);
+            this.ClientSize = new System.Drawing.Size(1202, 635);
+            this.Controls.Add(this.btnShowReport);
+            this.Controls.Add(this.btnClass);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.btnOut);
             this.Controls.Add(this.label1);
@@ -315,5 +355,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn registryDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn StudentClassIDComboBox;
+        private System.Windows.Forms.Button btnClass;
+        private System.Windows.Forms.Button btnShowReport;
     }
 }

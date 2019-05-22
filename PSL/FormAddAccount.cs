@@ -77,7 +77,6 @@ namespace PSL
                 {
                     bindingSourceAccount.EndEdit();
                     DialogResult = DialogResult.OK;
-
                     
                 
                 }
@@ -85,6 +84,51 @@ namespace PSL
             
 
             
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cb_isAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
