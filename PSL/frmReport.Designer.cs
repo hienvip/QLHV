@@ -31,17 +31,31 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.StudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSet = new PSL.DataSet();
+            this.classBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label1 = new System.Windows.Forms.Label();
             this.btnOut = new System.Windows.Forms.Button();
-            this.DataSet = new PSL.DataSet();
-            this.StudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.StudentTableAdapter = new PSL.DataSetTableAdapters.StudentTableAdapter();
-            this.classBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // StudentBindingSource
+            // 
+            this.StudentBindingSource.DataMember = "Student";
+            this.StudentBindingSource.DataSource = this.DataSet;
+            // 
+            // DataSet
+            // 
+            this.DataSet.DataSetName = "DataSet";
+            this.DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // classBindingSource
+            // 
+            this.classBindingSource.DataSource = typeof(PSL.Class);
             // 
             // reportViewer1
             // 
@@ -75,7 +89,7 @@
             this.btnOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOut.Image = global::PSL.Properties.Resources.Windows_Close_Program_icon;
-            this.btnOut.Location = new System.Drawing.Point(1024, 13);
+            this.btnOut.Location = new System.Drawing.Point(1113, 13);
             this.btnOut.Margin = new System.Windows.Forms.Padding(4);
             this.btnOut.Name = "btnOut";
             this.btnOut.Size = new System.Drawing.Size(67, 71);
@@ -84,29 +98,15 @@
             this.btnOut.UseVisualStyleBackColor = true;
             this.btnOut.Click += new System.EventHandler(this.BtnOut_Click);
             // 
-            // DataSet
-            // 
-            this.DataSet.DataSetName = "DataSet";
-            this.DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // StudentBindingSource
-            // 
-            this.StudentBindingSource.DataMember = "Student";
-            this.StudentBindingSource.DataSource = this.DataSet;
-            // 
             // StudentTableAdapter
             // 
             this.StudentTableAdapter.ClearBeforeFill = true;
-            // 
-            // classBindingSource
-            // 
-            this.classBindingSource.DataSource = typeof(PSL.Class);
             // 
             // frmReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1107, 534);
+            this.ClientSize = new System.Drawing.Size(1213, 555);
             this.Controls.Add(this.btnOut);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.reportViewer1);
@@ -114,8 +114,8 @@
             this.Name = "frmReport";
             this.Text = "frmReport";
             this.Load += new System.EventHandler(this.FrmReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

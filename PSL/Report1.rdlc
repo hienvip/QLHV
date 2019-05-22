@@ -435,7 +435,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Danh sách học viên trường ngoại ngữ tin học</Value>
+                <Value>Danh sách học viên trường ngoại ngữ tin học Nhất Nghiệp</Value>
                 <Style>
                   <FontSize>20pt</FontSize>
                 </Style>
@@ -446,9 +446,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
         <Top>0.29667in</Top>
-        <Left>1.18in</Left>
+        <Left>0.67167in</Left>
         <Height>0.43333in</Height>
-        <Width>5.61667in</Width>
+        <Width>7.075in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -476,7 +476,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>10.63833in</Width>
+  <Width>9.63833in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>

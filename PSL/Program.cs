@@ -23,7 +23,7 @@ namespace PSL
             //check login
             if (SQLConnector.is_login == true)
             {
-                FormMain frm = new FormMain();
+                frmMenu frm = new frmMenu();
                 frm.ShowDialog();
             }
         }

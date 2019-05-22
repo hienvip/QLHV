@@ -132,3 +132,4 @@ D:\Visualstudio\C#\SofwareProject\PSL\bin\Debug\zh-CHT\Microsoft.ReportViewer.Wi
 D:\Visualstudio\C#\SofwareProject\PSL\obj\Debug\PSL.frmReport.resources
 D:\Visualstudio\C#\SofwareProject\PSL\obj\Debug\RdlCompile.cache
 D:\Visualstudio\C#\SofwareProject\PSL\obj\Debug\RdlCompile.compiled
+D:\Visualstudio\C#\SofwareProject\PSL\obj\Debug\PSL.frmMenu.resources

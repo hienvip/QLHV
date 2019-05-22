@@ -21,11 +21,11 @@ namespace PSL
         QLHVEntities db;
         private void BtnOut_Click(object sender, EventArgs e)
         {
-           DialogResult result = MessageBox.Show("Are you want to exit", "Message", MessageBoxButtons.OKCancel);
-            if (result == DialogResult.OK)
-            {
-                Application.Exit();
-            }
+          
+                this.Hide();
+                frmMenu frm = new frmMenu();
+                frm.ShowDialog();
+            
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -39,11 +39,7 @@ namespace PSL
             studentBindingSource.DataSource = db.Students.ToList();
             accountBindingSource.DataSource = db.Accounts.ToList();
             StudentClassIDComboBox.DataSource = db.Classes.ToList();
-            if (SQLConnector.username != "admin")
-            {
-                btnAdmin.Hide();
-                
-            }
+            
         }
 
         private async void BtnAdd_Click(object sender, EventArgs e)

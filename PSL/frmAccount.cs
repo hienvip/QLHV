@@ -41,9 +41,10 @@ namespace PSL
 
         private void BtnOut_Click(object sender, EventArgs e)
         {
-            FormMain frm = new FormMain();
-            frm.ShowDialog();
             this.Hide();
+            frmMenu frm = new frmMenu();
+            frm.ShowDialog();
+            
         }
 
         private void FrmAccount_Load(object sender, EventArgs e)
@@ -88,7 +89,9 @@ namespace PSL
 
         private void BtnRefresh_Click(object sender, EventArgs e)
         {
-
+            Cursor.Current = Cursors.WaitCursor;
+            accountBindingSource.DataSource = db.Accounts.ToList();
+            Cursor.Current = Cursors.Default;
         }
 
         private void Label1_Click(object sender, EventArgs e)
@@ -96,9 +99,28 @@ namespace PSL
 
         }
 
-        private void BtnEdit_Click(object sender, EventArgs e)
+        private async void BtnEdit_Click(object sender, EventArgs e)
         {
+            Account obj = accountBindingSource.Current as Account;
+            if (obj != null)
+            {
+                using (FormAddAccount frm = new FormAddAccount(obj))
+                {
+                    if (frm.ShowDialog() == DialogResult.OK)
+                    {
+                        try
+                        {
+                            accountBindingSource.EndEdit();
+                            await db.SaveChangesAsync();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
 
+                    }
+                }
+            }
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

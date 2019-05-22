@@ -49,6 +49,73 @@ namespace PSL
         private void BtnOut_Click(object sender, EventArgs e)
         {
             this.Hide();
+            frmMenu frm = new frmMenu();
+            frm.ShowDialog();
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure want to delete this record ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                int rows = dataGridView1.RowCount;
+                for (int i = rows - 1; i >= 0; i--)
+                {
+                    if (dataGridView1.Rows[i].Selected)
+                    {
+                        db.Accounts.Remove(dataGridView1.Rows[i].DataBoundItem as Account);
+                        classBindingSource.RemoveAt(dataGridView1.Rows[i].Index);
+                        db.SaveChanges();
+                    }
+                }
+            }
+        }
+
+        private async void BtnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Do you want to save the changes ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    classBindingSource.EndEdit();
+                    await db.SaveChangesAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnRefresh_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            classBindingSource.DataSource = db.Classes.ToList();
+            Cursor.Current = Cursors.Default;
+        }
+
+        private async void BtnEdit_Click(object sender, EventArgs e)
+        {
+            Class obj = classBindingSource.Current as Class;
+            if (obj != null)
+            {
+                using (frmAddClass frm = new frmAddClass(obj))
+                {
+                    if (frm.ShowDialog() == DialogResult.OK)
+                    {
+                        try
+                        {
+                            classBindingSource.EndEdit();
+                            await db.SaveChangesAsync();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                    }
+                }
+            }
         }
     }
 }

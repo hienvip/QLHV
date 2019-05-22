@@ -29,7 +29,7 @@ namespace PSL
 
         private void FormAddAccount_Load(object sender, EventArgs e)
         {
-           
+            textBox1.Hide();
         }
 
         private void Cb_isAdmin_CheckStateChanged(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace PSL
         {
             this.Hide();
 
-            using (FormMain frm = new FormMain())
+            using (frmAccount frm = new frmAccount())
             {
                 frm.ShowDialog();
             }
@@ -55,9 +55,33 @@ namespace PSL
         private void BtnRegis_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
-            string password = Encryption.Encrypt(txtPassword.Text);
+            string password = txtPassword.Text;
+            string repeatPass = txtRepeat.Text;
             bool is_admin=false;
-            txtPassword.Text = Encryption.Encrypt(txtPassword.Text);
+            if (password == repeatPass)
+            {
+                txtPassword.Text = Encryption.Encrypt(txtPassword.Text);
+                using (DataTable dttmp = SQLConnector.ExecuteReturnDataTable("sp_checkRegistry", "@user", username))
+                {
+                    if (dttmp != null && dttmp.Rows.Count > 0)
+                    {
+                        MessageBox.Show("username already taken ! Please choose the other", "message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        SQLConnector.checkRegistry = true;
+                    }
+                    else
+                    {
+                        bindingSourceAccount.EndEdit();
+                        DialogResult = DialogResult.OK;
+
+
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Password do not match , please fill again!!!", "message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
             if (cb_isAdmin.CheckState == CheckState.Checked)
             {
                 is_admin = true;
@@ -66,21 +90,7 @@ namespace PSL
                 is_admin = false;
             }
 
-            using (DataTable dttmp = SQLConnector.ExecuteReturnDataTable("sp_checkRegistry", "@user", username))
-            {
-                if(dttmp!=null && dttmp.Rows.Count > 0)
-                {
-                    MessageBox.Show("username already taken ! Please choose the other", "message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    SQLConnector.checkRegistry = true;
-                }
-                else 
-                {
-                    bindingSourceAccount.EndEdit();
-                    DialogResult = DialogResult.OK;
-                    
-                
-                }
-            }
+           
             
 
             
@@ -129,6 +139,8 @@ namespace PSL
         private void BtnOut_Click(object sender, EventArgs e)
         {
             this.Hide();
+            frmAccount frm = new frmAccount();
+            frm.ShowDialog();
         }
     }
 }

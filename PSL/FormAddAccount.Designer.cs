@@ -39,8 +39,10 @@
             this.btnRegis = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.bindingSourceAccount = new System.Windows.Forms.BindingSource(this.components);
             this.btnOut = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtRepeat = new System.Windows.Forms.TextBox();
+            this.bindingSourceAccount = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAccount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +72,7 @@
             // txtUsername
             // 
             this.txtUsername.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceAccount, "username", true));
-            this.txtUsername.Location = new System.Drawing.Point(140, 105);
+            this.txtUsername.Location = new System.Drawing.Point(159, 105);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(302, 22);
             this.txtUsername.TabIndex = 2;
@@ -89,16 +91,17 @@
             // txtPassword
             // 
             this.txtPassword.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceAccount, "Pass", true));
-            this.txtPassword.Location = new System.Drawing.Point(140, 158);
+            this.txtPassword.Location = new System.Drawing.Point(159, 158);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(302, 22);
             this.txtPassword.TabIndex = 4;
+            this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 202);
+            this.label4.Location = new System.Drawing.Point(42, 247);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 17);
             this.label4.TabIndex = 5;
@@ -109,7 +112,7 @@
             // 
             this.cb_isAdmin.AutoSize = true;
             this.cb_isAdmin.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bindingSourceAccount, "is_admin", true));
-            this.cb_isAdmin.Location = new System.Drawing.Point(140, 201);
+            this.cb_isAdmin.Location = new System.Drawing.Point(140, 246);
             this.cb_isAdmin.Name = "cb_isAdmin";
             this.cb_isAdmin.Size = new System.Drawing.Size(138, 21);
             this.cb_isAdmin.TabIndex = 6;
@@ -120,7 +123,7 @@
             // 
             // btnRegis
             // 
-            this.btnRegis.Location = new System.Drawing.Point(45, 275);
+            this.btnRegis.Location = new System.Drawing.Point(45, 320);
             this.btnRegis.Name = "btnRegis";
             this.btnRegis.Size = new System.Drawing.Size(143, 37);
             this.btnRegis.TabIndex = 7;
@@ -130,7 +133,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(299, 275);
+            this.button2.Location = new System.Drawing.Point(299, 320);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(143, 37);
             this.button2.TabIndex = 8;
@@ -147,10 +150,6 @@
             this.textBox1.TabIndex = 9;
             this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
-            // bindingSourceAccount
-            // 
-            this.bindingSourceAccount.DataSource = typeof(PSL.Account);
-            // 
             // btnOut
             // 
             this.btnOut.FlatAppearance.BorderSize = 0;
@@ -166,11 +165,34 @@
             this.btnOut.UseVisualStyleBackColor = true;
             this.btnOut.Click += new System.EventHandler(this.BtnOut_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(35, 204);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(119, 17);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Repeat-password";
+            // 
+            // txtRepeat
+            // 
+            this.txtRepeat.Location = new System.Drawing.Point(159, 204);
+            this.txtRepeat.Name = "txtRepeat";
+            this.txtRepeat.Size = new System.Drawing.Size(302, 22);
+            this.txtRepeat.TabIndex = 12;
+            this.txtRepeat.UseSystemPasswordChar = true;
+            // 
+            // bindingSourceAccount
+            // 
+            this.bindingSourceAccount.DataSource = typeof(PSL.Account);
+            // 
             // FormAddAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(513, 393);
+            this.Controls.Add(this.txtRepeat);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnOut);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
@@ -207,5 +229,7 @@
         private System.Windows.Forms.BindingSource bindingSourceAccount;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnOut;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtRepeat;
     }
 }

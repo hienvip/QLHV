@@ -31,17 +31,17 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.accIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isadminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnOut = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.accIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isadminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +75,42 @@
             this.dataGridView1.Size = new System.Drawing.Size(714, 298);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            // 
+            // accIDDataGridViewTextBoxColumn
+            // 
+            this.accIDDataGridViewTextBoxColumn.DataPropertyName = "AccID";
+            this.accIDDataGridViewTextBoxColumn.HeaderText = "AccID";
+            this.accIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.accIDDataGridViewTextBoxColumn.Name = "accIDDataGridViewTextBoxColumn";
+            this.accIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
+            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.usernameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // passDataGridViewTextBoxColumn
+            // 
+            this.passDataGridViewTextBoxColumn.DataPropertyName = "Pass";
+            this.passDataGridViewTextBoxColumn.HeaderText = "Pass";
+            this.passDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.passDataGridViewTextBoxColumn.Name = "passDataGridViewTextBoxColumn";
+            this.passDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // isadminDataGridViewCheckBoxColumn
+            // 
+            this.isadminDataGridViewCheckBoxColumn.DataPropertyName = "is_admin";
+            this.isadminDataGridViewCheckBoxColumn.HeaderText = "is_admin";
+            this.isadminDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.isadminDataGridViewCheckBoxColumn.Name = "isadminDataGridViewCheckBoxColumn";
+            this.isadminDataGridViewCheckBoxColumn.Width = 125;
+            // 
+            // accountBindingSource
+            // 
+            this.accountBindingSource.DataSource = typeof(PSL.Account);
             // 
             // btnOut
             // 
@@ -171,42 +207,6 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
-            // accIDDataGridViewTextBoxColumn
-            // 
-            this.accIDDataGridViewTextBoxColumn.DataPropertyName = "AccID";
-            this.accIDDataGridViewTextBoxColumn.HeaderText = "AccID";
-            this.accIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.accIDDataGridViewTextBoxColumn.Name = "accIDDataGridViewTextBoxColumn";
-            this.accIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
-            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            this.usernameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // passDataGridViewTextBoxColumn
-            // 
-            this.passDataGridViewTextBoxColumn.DataPropertyName = "Pass";
-            this.passDataGridViewTextBoxColumn.HeaderText = "Pass";
-            this.passDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.passDataGridViewTextBoxColumn.Name = "passDataGridViewTextBoxColumn";
-            this.passDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // isadminDataGridViewCheckBoxColumn
-            // 
-            this.isadminDataGridViewCheckBoxColumn.DataPropertyName = "is_admin";
-            this.isadminDataGridViewCheckBoxColumn.HeaderText = "is_admin";
-            this.isadminDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.isadminDataGridViewCheckBoxColumn.Name = "isadminDataGridViewCheckBoxColumn";
-            this.isadminDataGridViewCheckBoxColumn.Width = 125;
-            // 
-            // accountBindingSource
-            // 
-            this.accountBindingSource.DataSource = typeof(PSL.Account);
-            // 
             // frmAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -222,6 +222,7 @@
             this.Controls.Add(this.btnRefresh);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAccount";
             this.Load += new System.EventHandler(this.FrmAccount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
