@@ -22,7 +22,6 @@ namespace PSL
         private void BtnOut_Click(object sender, EventArgs e)
         {
 
-            
             using (frmMenu frm = new frmMenu())
             {
                 this.Hide();
@@ -150,8 +149,13 @@ namespace PSL
 
         private void BtnShowReport_Click(object sender, EventArgs e)
         {
-            frmReport frm = new frmReport();
-            frm.ShowDialog();
+            using (frmReport frm = new frmReport())
+            {
+                this.Hide();
+                frm.ShowDialog();
+                
+            }
+                
         }
     }
 }

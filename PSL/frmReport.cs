@@ -27,9 +27,11 @@ namespace PSL
 
         private void BtnOut_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormMain frm = new FormMain();
-            frm.ShowDialog();
+            using(frmMenu frm = new frmMenu())
+            {
+                this.Hide();
+                frm.ShowDialog();
+            }
         }
     }
 }

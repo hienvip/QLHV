@@ -29,7 +29,11 @@ namespace PSL
 
         private void BtnOut_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            using (frmClass frm = new frmClass())
+            {
+                this.Hide();
+                frm.ShowDialog();
+            }
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)

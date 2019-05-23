@@ -21,10 +21,13 @@ namespace PSL
 
         private async void BtnAdd_Click(object sender, EventArgs e)
         {
+            
             using (frmAddClass frm = new frmAddClass(new Class()))
             {
+                
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
+                    
                     try
                     {
                         classBindingSource.Add(frm.ClassInfo);
@@ -62,7 +65,7 @@ namespace PSL
                 {
                     if (dataGridView1.Rows[i].Selected)
                     {
-                        db.Accounts.Remove(dataGridView1.Rows[i].DataBoundItem as Account);
+                        db.Classes.Remove(dataGridView1.Rows[i].DataBoundItem as Class);
                         classBindingSource.RemoveAt(dataGridView1.Rows[i].Index);
                         db.SaveChanges();
                     }
