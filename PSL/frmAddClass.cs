@@ -31,5 +31,10 @@ namespace PSL
         {
             this.Hide();
         }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

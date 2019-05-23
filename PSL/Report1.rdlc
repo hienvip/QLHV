@@ -342,7 +342,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!gender.Value</Value>
+                              <Value>=Switch(Fields!gender.Value=True,"Nam",Fields!gender.Value=False,"Nữ")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>

@@ -21,10 +21,14 @@ namespace PSL
         QLHVEntities db;
         private void BtnOut_Click(object sender, EventArgs e)
         {
-          
+
+            
+            using (frmMenu frm = new frmMenu())
+            {
                 this.Hide();
-                frmMenu frm = new frmMenu();
                 frm.ShowDialog();
+            }
+                
             
         }
 

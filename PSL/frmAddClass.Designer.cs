@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.bindingSourceClass = new System.Windows.Forms.BindingSource(this.components);
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtClassDetail = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnOut = new System.Windows.Forms.Button();
-            this.bindingSourceClass = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceClass)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,6 +51,10 @@
             this.txtID.Size = new System.Drawing.Size(100, 22);
             this.txtID.TabIndex = 19;
             // 
+            // bindingSourceClass
+            // 
+            this.bindingSourceClass.DataSource = typeof(PSL.Class);
+            // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(281, 272);
@@ -59,6 +63,7 @@
             this.btnCancel.TabIndex = 18;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // btnAdd
             // 
@@ -141,10 +146,6 @@
             this.btnOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnOut.UseVisualStyleBackColor = true;
             this.btnOut.Click += new System.EventHandler(this.BtnOut_Click);
-            // 
-            // bindingSourceClass
-            // 
-            this.bindingSourceClass.DataSource = typeof(PSL.Class);
             // 
             // frmAddClass
             // 
